@@ -8,7 +8,11 @@ export async function createTodo (todo) {
   // create a single incomplete todo with the correct 'todo' property for this user in supabase
   const response = await client
     .from('todos')
-    .insert(todo);
+    .insert({
+      todo: todo,
+      complete: false,
+      user_id: client.auth.user().id
+    });
 
   return checkError(response);
 }
