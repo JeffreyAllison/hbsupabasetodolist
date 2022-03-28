@@ -39,14 +39,14 @@ async function displayTodos () {
   // display the list of todos
 
   for (let todo of todos) {
-    const todoEL = renderTodo(todo);
+    const todoEl = renderTodo(todo);
 
-    todoEL.addEventListener('click', async () => {
+    todoEl.addEventListener('click', async () => {
       await completeTodo(todo.id);
 
       displayTodos();
     });
-    todosEl.append(todoEL);
+    todosEl.append(todoEl);
   }
 
 }
