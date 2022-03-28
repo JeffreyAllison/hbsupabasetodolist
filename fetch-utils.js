@@ -22,7 +22,7 @@ export async function deleteAllTodos () {
   const response = await client
     .from('todos')
     .delete()
-    .match({ id });
+    .match({ user_id: client.auth.user().id })
 
   return checkError(response);
 }
