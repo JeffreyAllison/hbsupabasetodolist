@@ -57,12 +57,7 @@
       "always"
     ],
     "space-in-parens": [
-      "error",
-      {
-        "anonymous": "ignore",
-        "named": "ignore",
-        "asyncArrow": "ignore"
-      }
+      "error"
     ],
     "space-infix-ops": "error",
     "object-curly-spacing": [
@@ -73,9 +68,9 @@
     "space-before-function-paren": [
       "error",
       {
-        "anonymous": "never",
-        "named": "never",
-        "asyncArrow": "always"
+        "anonymous": "ignore",
+        "named": "ignore",
+        "asyncArrow": "ignore"
       }
     ],
     "keyword-spacing": [
