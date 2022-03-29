@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const SUPABASE_URL = 'https://gxwgjhfyrlwiqakdeamc.supabase.co';
 const SUPABASE_KEY =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjQxMTMxMiwiZXhwIjoxOTUxOTg3MzEyfQ.PHekiwfLxT73qQsLklp0QFEfNx9NlmkssJFDnlvNIcA';
@@ -22,7 +23,7 @@ export async function deleteAllTodos () {
   const response = await client
     .from('todos')
     .delete()
-    .match({ user_id: client.auth.user().id })
+    .match({ user_id: client.auth.user().id });
 
   return checkError(response);
 }
