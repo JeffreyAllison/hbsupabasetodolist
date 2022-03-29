@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <div class="loading-spinner invisible">
+    <span id="loading-text">Loading list...</span>
+  </div>
   <header>
     <div class="gutter-right logo">
       <h3>Todos</h3>
@@ -24,9 +27,9 @@
     <button id="logout">Logout</button>
     <form class="todo-form">
       <input placeholder="to do..." name="todo" required />
-      <button>Add todo</button>
+      <button>Add to your to-do list</button>
     </form>
-    <button class="delete-button">Delete all todos?</button>
+    <button class="delete-button">Delete your to-do list?</button>
     <div class="todos"></div>
   </main>
   <footer>
